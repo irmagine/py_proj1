@@ -1,5 +1,5 @@
-x_month = []
-y_gap = []
+month = []
+gap = []
 
 with open("offerten.csv", "r") as file:
 
@@ -11,16 +11,11 @@ with open("offerten.csv", "r") as file:
         sales = int(data[1]) + int(data[2])
         sales_netto = sales // 1.077
         sales_ohne_ex = sales_netto - int(data[3]) - int(data[4])
-        gap = 8000 - sales_ohne_ex 
-        y_gap.append(int(gap))
-        x_month.append(data[0])
+        gap_mon = 8000 - sales_ohne_ex
+        gap.append(int(gap_mon))
+        month.append(data[0])
 
-print(x_month)
-print(y_gap)
-
-import matplotlib.pyplot as plt
-
-
+print(gap)
 
 steuer_mon = []
 
@@ -33,10 +28,9 @@ with open("steuer.csv", "r") as file:
         steuer_mon.append(steuer_betr)
         steuer_jahr = sum(steuer_mon)
 print(steuer_mon)
-print(steuer_jahr)
+# print(steuer_jahr)
 
 cf_month = []
-month = []
 
 with open("Cashflow.csv", "r") as file:
     for line in file:
@@ -45,13 +39,20 @@ with open("Cashflow.csv", "r") as file:
         data = line.strip().split(";")
         cf = int(data[1])
         cf_month.append(cf)
-        month.append(data[0])
+
+
 
 import matplotlib.pyplot as plt
 
-plt.plot(x_month, y_gap)
-plt.plot(month, cf_month)
+fig, ax = plt.subplots()
+ax.plot(month, gap, label="Revenue Gap")
+ax.plot(month, cf_month, label="Cashflow")
+ax.plot(month, steuer_mon, label="Acc for taxes")
+ax.legend()
+
 plt.show()
-plt.show()
+
+
+
 
 
