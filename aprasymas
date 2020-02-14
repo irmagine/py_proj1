@@ -4,7 +4,7 @@ yra 8000.
 Finansų toolsas, kurį jis naudoja, apyvartą rodo tik su pvm. Dėl to rodikliai ne visai atitinka realybę. Tad mano
 programėlė eliminuoja dėl pvm atsiradusius netikslumus rodikliuose. Skaičiavau kelis, kurie yra freelanceriui
 svarbiausi:
- - kiek apyvartos kurį menesį trūksta (mėlyna linija)
+ - kiek apyvartos kurį mėnesį trūksta (mėlyna linija)
  - laukiami pinigų srautai (oranžinė linija)
  - atidėjimai mokesčiams (žalia linija)
 
