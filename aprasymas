@@ -1,0 +1,11 @@
+Projekto idėja kilo iš to, jog pažįstamas freelanceris norėjo turėti galimybę paprastai paskaičiuoti,
+kiek apzvartos dar trūksta, jog atėmus kaštus liktų nusistatyta suma. Jo nusistatyta reikiama suma mėnesiui
+yra 8000.
+Finansų toolsas, kurį jis naudoja, apyvartą rodo tik su pvm. Dėl to rodikliai ne visai atitinka realybę. Tad mano
+programėlė eliminuoja dėl pvm atsiradusius netikslumus rodikliuose. Skaičiavau kelis, kurie yra freelanceriui
+svarbiausi:
+ - kiek apyvartos kurį menesį trūksta (mėlyna linija)
+ - laukiami pinigų srautai (oranžinė linija)
+ - atidėjimai mokesčiams (žalia linija)
+
+

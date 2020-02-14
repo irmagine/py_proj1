@@ -39,6 +39,7 @@ with open("Cashflow.csv", "r") as file:
         data = line.strip().split(";")
         cf = int(data[1])
         cf_month.append(cf)
+print(cf_month)
 
 
 import matplotlib.pyplot as plt
